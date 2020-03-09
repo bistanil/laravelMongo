@@ -19,6 +19,16 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::group([
+	'namespace' => 'Admin', // it is added in controller function name
+	'prefix' => 'admin', //it is added in url
+	'as' => 'admin.', //route name
+	'middleware' => 'auth'
+], function(){
+	Route::get('', 'AdminController@dashboard');
+	Route::get('dashboard', 'AdminController@dashboard')->name('dashboard');
+});
+
 /*Route::post('user/store', 'UserControllerMongo@store')->name('user.store');
 Route::post('user/store', 'UserControllerMongo@store')->name('user.store');
 Route::get('register', function(){
