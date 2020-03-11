@@ -27,6 +27,9 @@ Route::group([
 ], function(){
 	Route::get('', 'AdminController@dashboard');
 	Route::get('dashboard', 'AdminController@dashboard')->name('dashboard');
+	Route::get('listusers', 'AdminController@listusers')->name('listusers');
+	Route::get('edituser/{id}', 'AdminController@edituser')->name('edituser');
+	Route::post('updateuser/{id}', 'AdminController@updateuser')->name('updateuser');
 });
 
 /*Route::post('user/store', 'UserControllerMongo@store')->name('user.store');

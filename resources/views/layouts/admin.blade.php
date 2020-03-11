@@ -33,9 +33,9 @@
                     <li class="nav-item">
                         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                     </li>
-                    <li class="nav-item d-none d-sm-inline-block">
-                        <a href="../../index3.html" class="nav-link">Home</a>
-                    </li>
+                    <!-- <li class="nav-item d-none d-sm-inline-block">
+                        <a href="" class="nav-link">Home</a>
+                    </li> -->
                 </ul>
 
                 <!-- Right navbar links -->
@@ -108,7 +108,7 @@
                           <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
                         </div>
                         <div class="info">
-                          <a href="#" class="d-block">Alexander Pierce</a>
+                          <a href="#" class="d-block">{{ Auth::user()->name }}</a>
                         </div>
                     </div>
 
@@ -118,24 +118,17 @@
                             <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
                             <li class="nav-item has-treeview">
                                 <a href="#" class="nav-link">
-                                    <i class="nav-icon fas fa-tachometer-alt"></i>
-                                    <p>Dashboard <i class="right fas fa-angle-left"></i></p>
+                                    <i class="nav-icon fas fa-user"></i>
+                                    <p>Users <i class="right fas fa-angle-left"></i></p>
                                 </a>
                                 <ul class="nav nav-treeview">
                                     <li class="nav-item">
-                                        <a href="../../index.html" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Dashboard v1</p>
+                                        <a href="{{ route('admin.listusers') }}" class="nav-link">
+                                            <i class="fas fa-users nav-icon"></i>
+                                            <p>List</p>
                                         </a>
                                     </li>
                                 </ul>
-                            </li>
-                            <li class="nav-header">EXAMPLES</li>
-                            <li class="nav-item">
-                                <a href="../calendar.html" class="nav-link">
-                                    <i class="nav-icon far fa-calendar-alt"></i>
-                                    <p>Calendar <span class="badge badge-info right">2</span></p>
-                                </a>
                             </li>
                         </ul>
                     </nav>

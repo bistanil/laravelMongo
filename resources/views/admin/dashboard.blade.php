@@ -27,12 +27,10 @@
             <!-- Block buttons -->
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Block Buttons</h3>
+                <h3 class="card-title">Dashboard</h3>
               </div>
               <div class="card-body">
-                <button type="button" class="btn btn-default btn-block">.btn-block</button>
-                <button type="button" class="btn btn-default btn-block btn-flat">.btn-block .btn-flat</button>
-                <button type="button" class="btn btn-default btn-block btn-sm">.btn-block .btn-sm</button>
+                Dashboard content
               </div>
             </div>
             <!-- /.card -->
